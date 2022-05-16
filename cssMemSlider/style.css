@@ -10,7 +10,7 @@ html {
 
 .background {
     height: 100vh;
-    background: url(/cssMemSlider/assets/gif/gif.gif) no-repeat;
+    background: url(./assets/gif/gif.gif) no-repeat;
     background-size: cover;
     background-position: center;
 }
