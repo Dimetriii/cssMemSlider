@@ -9,6 +9,7 @@ html {
 }
 
 .background {
+    height: 100vh;
     background: url(/cssMemSlider/assets/gif/gif.gif) no-repeat;
     background-size: cover;
     background-position: center;
@@ -31,12 +32,11 @@ header {
     margin: 10px;
 }
 
-.container {
+.block-main {
     width: 100%;
 }
 
 .slider {
-    max-width: 65em;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -58,32 +58,10 @@ header {
 
 .img-sl1 {
     max-width: 900px;
-    /* display: block; */
     width: 900px;
     height: 100%;
+    background-position: center;
 }
-
-.img-sl2 {
-    max-width: 900px;
-    /* display: block; */
-    width: 900px;
-    height: 100%;
-}
-
-.img-sl3 {
-    max-width: 900px;
-    /* display: block; */
-    width: 900px;
-    height: 100%;
-}
-
-.img-sl4 {
-    max-width: 900px;
-    /* display: block; */
-    width: 900px;
-    height: 100%;
-}
-
 
 .slider-desr {
     width: 100%;
@@ -123,7 +101,7 @@ header {
 .label-btn {
     display: flex;
     justify-content: center;
-    height: 1.8em;
+    height: 50px;
     width: 50%;
     cursor: pointer;
     border-radius: 10%;
@@ -145,6 +123,13 @@ header {
 .label-btn:hover .sp-cir {
     transition: 0.6s;
     opacity: 1;
+    box-shadow: 0px 0px 1px red;
+}
+
+.label-btn:active .sp-cir {
+    height: 20px;
+    transition: 0.1s;
+    opacity: 0.5;
 }
 
 .slide-move {
@@ -191,109 +176,126 @@ header {
     margin-left: -90%;
 }
 
-/* MEDIA QUERIES */
+@media screen and (max-width: 910px) {
+    .wrapper {
+        max-width: 568px;
+        max-height: 650px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
 
-/* @media screen and (max-width: 950px) {
-    .slide-item>p {
-        font-size: 1.4rem;
+    .img-sl1 {
+        max-width: 910px;
+        width: 570px;
+        height: 100%;
+        background-position: center;
+    }
 
+    .background {
+        height: 100vh;
+    }
+
+    .for-mob {
+        max-width: 480px;
     }
 }
 
-@media screen and (max-width: 800px) {
-    header {
-        font-size: 1.4rem;
-        height: 5vh;
+@media screen and (max-width: 600px) {
+    .wrapper {
+        max-width: 420px;
+        max-height: 550px;
+    }
+
+    .img-sl1 {
+        width: 420px;
+        height: 100%;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .for-mob {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        max-width: 20%;
+    }
+
+    .slider-desr {
+        max-width: 100%;
+    }
+
+    .sp-cir {
+        width: 60px;
+        height: 25px;
+    }
+
+    .label-btn {
+        height: 80px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .wrapper {
+        max-width: 320px;
+        max-height: 410px;
+    }
+
+    .img-sl1 {
+        width: 320px;
+        height: 100%;
+    }
+
+    .slider-asset {
+        width: 100%;
+        height: 400px;
+        transition: 1s;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .for-mob {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        max-width: 20%;
+    }
+
+    .slider-desr {
+        max-width: 100%;
+    }
+
+    .sp-cir {
+        width: 60px;
+        height: 25px;
+    }
+
+    .label-btn {
+        height: 100px;
+        width: 100%;
     }
 
     .slide-item>p {
         font-size: 1.3rem;
-
+        padding-left: 10px;
     }
-
-
-} */
-
-
-
-
-
-/* @media screen and (max-width: 690px) {
-    header {
-        font-size: 1.2rem;
-        padding-bottom: 3rem;
-    }
-
-    main {
-        padding-bottom: 3.75rem;
-
-    }
-
-    footer {
-        padding: 5rem;
-    }
-
-    .container {
-        padding: 0;
-        height: 40vh;
-        padding-bottom: 3.75rem;
-        border: 3px solid green;
-
-    } */
-
-/* .slide-item>p {
-        padding-bottom: 1rem;
-
-        font-size: 1rem;
-
-    }
-
-    .for-mob {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .slider-btns {
-        max-width: 7rem;
-    }
-
-    .sp-cir{ 
-        width: 0.8rem;
-        height: 0.8rem;
-    }
-    .slider-asset>img {
-        width: 34.375rem
-    } */
-
-/* } */
-
-
-/* @media screen and (max-width: 550px) {
-    .slide-item>p {
-        font-size: 0.65rem;
-
-    }
-
-    .container {
-        height: 30vh;
-        padding-bottom: 4rem;
-    }
-
-    .slider-asset>img {
-        width: 28.125rem;
-    }
-
-
-
-    .rsschool {
-        width: 6.25rem;
-    }
-
-    .foot-m>* {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        padding: 3rem;
-    }
-} */
+}
